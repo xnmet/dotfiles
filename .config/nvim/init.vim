@@ -2,9 +2,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 " development
 Plug '~/.config/nvim/rc'
-Plug '~/.config/nvim/easyfiles'
-Plug '~/.config/nvim/highlight'
-Plug '~/.config/nvim/matrix.vim'
 Plug 'junegunn/vader.vim'
 
 " text objects
@@ -23,7 +20,6 @@ Plug 'osyo-manga/vim-anzu'
 
 " misc
 Plug 'mhinz/vim-startify'
-Plug 'wesQ3/vim-windowswap'
 Plug 'jiangmiao/auto-pairs'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-repeat'
