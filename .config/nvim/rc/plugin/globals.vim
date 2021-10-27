@@ -5,11 +5,6 @@ let g:AutoPairsMultilineClose = 0
 let g:AutoPairsShortcutToggle = ''
 
 "
-" windowswap
-"
-let g:windowswap_map_keys = 0
-
-"
 " smoothie
 "
 let g:smoothie_no_default_mappings = 1
@@ -18,7 +13,7 @@ let g:smoothie_no_default_mappings = 1
 " wordmotion
 "
 let g:wordmotion_nomap = 1
-" let g:wordmotion_spaces = ['\w\@<=-\w\@=', '\.', '_']
+let g:wordmotion_spaces = ['\w\@<=-\w\@=', '\.', '_']
 
 "
 " easymotion

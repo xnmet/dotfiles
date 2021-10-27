@@ -90,3 +90,14 @@ endfun
 
 imap <expr> <tab>   pumvisible() ? "\<c-n>" : <SID>autocomplete()
 imap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+
+" u/olminator
+augroup yank_restore_cursor
+    autocmd!
+    autocmd VimEnter,CursorMoved *
+        \ let s:cursor = getpos('.')
+    autocmd TextYankPost *
+        \ if v:event.operator ==? 'y' |
+            \ call setpos('.', s:cursor) |
+        \ endif
+augroup END
