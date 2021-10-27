@@ -31,6 +31,8 @@ map b  <Plug>WordMotion_b
 map t  <Plug>WordMotion_e
 omap aw <Plug>WordMotion_aw
 omap iw <Plug>WordMotion_iw
+xmap aw <Plug>WordMotion_aw
+xmap iw <Plug>WordMotion_iw
 
 nnoremap Y y$
 
