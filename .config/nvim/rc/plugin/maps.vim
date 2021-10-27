@@ -97,6 +97,8 @@ nnoremap <silent> <c-r> gr
 
 nmap <c-q> :q<cr>
 
+nmap <silent> <c-u> :silent redo<cr>
+
 " LEADER
 
 let mapleader = ' '
