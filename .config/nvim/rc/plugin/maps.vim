@@ -68,17 +68,10 @@ xmap as <Plug>(textobj-sandwich-auto-a)
 omap is <Plug>(textobj-sandwich-auto-i)
 omap as <Plug>(textobj-sandwich-auto-a)
 
-xmap iss <Plug>(textobj-sandwich-auto-i)
-xmap ass <Plug>(textobj-sandwich-auto-a)
-omap iss <Plug>(textobj-sandwich-auto-i)
-omap ass <Plug>(textobj-sandwich-auto-a)
-
 xmap iq <Plug>(textobj-sandwich-query-i)
 xmap aq <Plug>(textobj-sandwich-query-a)
 omap iq <Plug>(textobj-sandwich-query-i)
 omap aq <Plug>(textobj-sandwich-query-a)
-
-call operator#sandwich#set('all', 'all', 'highlight', 0)
 
 runtime macros/sandwich/keymap/surround.vim
 
