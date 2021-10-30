@@ -101,6 +101,4 @@ nmap <leader>d :Buffers<cr>
 nmap <leader>f :Files<cr>
 nmap <leader>c :Colors<cr>
 
-nmap <leader>v <Plug>(easymotion-repeat)
-
 nnoremap <leader>e :so $MYVIMRC<CR>
