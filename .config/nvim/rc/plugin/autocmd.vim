@@ -27,7 +27,6 @@ augroup rc_file
   " save cursor position
   au BufRead * call setpos('.', getpos("'\""))
   " autosave
-  " au BufWinLeave,FocusLost * silent update
   au InsertLeave,TextChanged * silent update
 augroup END
 
