@@ -11,6 +11,8 @@ endfun
 
 map <F2> :call <SID>transparent()<cr>
 
+" highlight 80 character
+
 "
 " term
 "
