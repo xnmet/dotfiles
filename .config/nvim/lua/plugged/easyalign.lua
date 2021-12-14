@@ -1,1 +1,1 @@
-map('nx', 'ca', '<Plug>(EasyAlign)')
+nvim_map('nx', 'ca', '<Plug>(EasyAlign)')
