@@ -22,87 +22,98 @@ require('packer').startup({ function()
   use 'wbthomason/packer.nvim'
 
   use {
-    'chaoren/vim-wordmotion', 
-    config = [[require('plugged.wordmotion')]]
-  }
-
-  use {
-    'junegunn/vim-easy-align',
-    config = [[require('plugged.easyalign')]]
-  }
-
-  use {
-    'tpope/vim-commentary',
-    config = [[require('plugged.commentary')]]
-  }
-
-  use {
-    'machakann/vim-sandwich',
-    config = [[require('plugged.sandwich')]]
-  }
-
-  use {
-    'easymotion/vim-easymotion',
-    config = [[require('plugged.easymotion')]]
-  }
-
-  use {
     'junegunn/fzf.vim',
     config = [[require('plugged.fzf')]]
   }
 
-  use 'neovim/nvim-lspconfig'
-  use 'williamboman/nvim-lsp-installer'
-  use 'folke/trouble.nvim'
-
-  use 'nvim-lua/plenary.nvim'
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { 'nvim-lua/plenary.nvim' }
+  }
 
   use {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
+    run = ':TSUpdate',
+    requires = {
+      'nvim-treesitter/playground',
+      'nvim-treesitter/nvim-treesitter-textobjects',
+    }
   }
-  use 'nvim-treesitter/nvim-treesitter-textobjects'
-  use 'nvim-treesitter/playground'
 
-  use 'kana/vim-textobj-user'
-
-  use 'kana/vim-textobj-indent'
-  use 'glts/vim-textobj-comment'
-
-  use 'nvim-telescope/telescope.nvim'
-
-  use 'haya14busa/is.vim'
-  use 'haya14busa/vim-asterisk'
-  use 'osyo-manga/vim-anzu'
-
+  -- text
   use {
-    'mhinz/vim-startify',
-    config = [[require('plugged.startify')]]
+    {
+      'junegunn/vim-easy-align',
+      config = [[require('plugged.easyalign')]]
+    },
+    {
+      'tpope/vim-commentary',
+      config = [[require('plugged.commentary')]]
+    },
+    {
+      'machakann/vim-sandwich',
+      config = [[require('plugged.sandwich')]]
+    },
+    {
+      'chaoren/vim-wordmotion', 
+      config = [[require('plugged.wordmotion')]]
+    },
+    {
+      'easymotion/vim-easymotion',
+      config = [[require('plugged.easymotion')]]
+    },
+    'kana/vim-textobj-user',
+    'kana/vim-textobj-indent',
+    'glts/vim-textobj-comment',
+    {
+      'jiangmiao/auto-pairs',
+      config = [[require('plugged.auto-pairs')]]
+    },
   }
 
+  -- search
   use {
-    'jiangmiao/auto-pairs',
-    config = [[require('plugged.auto-pairs')]]
+    'haya14busa/is.vim',
+    'haya14busa/vim-asterisk',
+    'osyo-manga/vim-anzu',
   }
 
-  -- Plug 'tpope/vim-repeat'
-
+  -- interface
   use {
-    'psliwka/vim-smoothie',
-    config = [[require('plugged.smoothie')]]
+    {
+      'mhinz/vim-startify',
+      config = [[require('plugged.startify')]]
+    },
+    {
+      'psliwka/vim-smoothie',
+      config = [[require('plugged.smoothie')]]
+    },
   }
 
-  use 'widatama/vim-phoenix'
+  -- lsp
+  use {
+    {
+      'neovim/nvim-lspconfig',
+      requires = {
+        'williamboman/nvim-lsp-installer',
+      },
+    },
+    'folke/trouble.nvim',
+  }
 
-  use 'andreasvc/vim-256noir'
-  use 'nikolvs/vim-sunbather'
-  use 'dracula/vim'
-  use 'preservim/vim-colors-pencil'
-  use 'whatyouhide/vim-gotham'
-  use 'arcticicestudio/nord-vim'
-  use 'sainnhe/sonokai'
-  use 'mangeshrex/uwu.vim'
-  use 'joshdick/onedark.vim'
+  -- colorschemes
+  use {
+    'widatama/vim-phoenix',
+    'andreasvc/vim-256noir',
+    'nikolvs/vim-sunbather',
+    'dracula/vim',
+    'preservim/vim-colors-pencil',
+    'whatyouhide/vim-gotham',
+    'arcticicestudio/nord-vim',
+    'sainnhe/sonokai',
+    'mangeshrex/uwu.vim',
+    'joshdick/onedark.vim',
+  }
 
   if packer_bootstrap then
     require('packer').sync()
