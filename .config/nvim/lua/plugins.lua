@@ -22,6 +22,11 @@ require('packer').startup({ function()
   use 'wbthomason/packer.nvim'
 
   use {
+    'Pocco81/AutoSave.nvim',
+    config = [[require('plugged.autosave')]]
+  }
+
+  use {
     'junegunn/fzf.vim',
     config = [[require('plugged.fzf')]]
   }
