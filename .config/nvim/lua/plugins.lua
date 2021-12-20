@@ -27,13 +27,9 @@ require('packer').startup({ function()
   }
 
   use {
-    'junegunn/fzf.vim',
-    config = [[require('plugged.fzf')]]
-  }
-
-  use {
     'nvim-telescope/telescope.nvim',
-    requires = { 'nvim-lua/plenary.nvim' }
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = [[require('plugged.telescope')]],
   }
 
   use {
