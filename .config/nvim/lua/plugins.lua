@@ -1,12 +1,12 @@
-local install_path = 
+local install_path =
   vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   packer_bootstrap = vim.fn.system({
-    'git', 
-    'clone', 
-    '--depth', 
-    '1', 
-    'https://github.com/wbthomason/packer.nvim', 
+    'git',
+    'clone',
+    '--depth',
+    '1',
+    'https://github.com/wbthomason/packer.nvim',
     install_path
   })
 end
@@ -32,14 +32,14 @@ require('packer').startup({ function()
     config = [[require('plugged.telescope')]],
   }
 
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate',
-    requires = {
-      'nvim-treesitter/playground',
-      'nvim-treesitter/nvim-treesitter-textobjects',
-    }
-  }
+  -- use {
+  --   'nvim-treesitter/nvim-treesitter',
+  --   run = ':TSUpdate',
+  --   requires = {
+  --     'nvim-treesitter/playground',
+  --     'nvim-treesitter/nvim-treesitter-textobjects',
+  --   }
+  -- }
 
   -- text
   use {
@@ -56,7 +56,7 @@ require('packer').startup({ function()
       config = [[require('plugged.sandwich')]]
     },
     {
-      'chaoren/vim-wordmotion', 
+      'chaoren/vim-wordmotion',
       config = [[require('plugged.wordmotion')]]
     },
     {
@@ -66,10 +66,11 @@ require('packer').startup({ function()
     'kana/vim-textobj-user',
     'kana/vim-textobj-indent',
     'glts/vim-textobj-comment',
-    {
-      'jiangmiao/auto-pairs',
-      config = [[require('plugged.auto-pairs')]]
-    },
+  }
+
+  use {
+    'windwp/nvim-autopairs',
+    config = [[require('nvim-autopairs').setup({})]]
   }
 
   -- search
