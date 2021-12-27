@@ -7,7 +7,7 @@ vim.cmd [[
 
   augroup file_trim_whitespace
     au!
-    au BufWritePre * call <SID>trim_whitespace()
+    au BufWrite * call <SID>trim_whitespace()
   augroup end
 ]]
 
