@@ -12,7 +12,7 @@ set.number         = true
 set.relativenumber = true
 set.termguicolors  = true
 set.signcolumn     = "yes"
-vim.cmd 'colorscheme phoenix'
+vim.cmd 'colorscheme sunbather'
 
 -- window
 set.splitbelow = true

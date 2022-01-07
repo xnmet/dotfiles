@@ -113,15 +113,8 @@ require('packer').startup({ function()
   -- colorschemes
   use {
     'widatama/vim-phoenix',
-    'andreasvc/vim-256noir',
     'nikolvs/vim-sunbather',
-    'dracula/vim',
-    'preservim/vim-colors-pencil',
-    'whatyouhide/vim-gotham',
     'arcticicestudio/nord-vim',
-    'sainnhe/sonokai',
-    'mangeshrex/uwu.vim',
-    'joshdick/onedark.vim',
   }
 
   if packer_bootstrap then
