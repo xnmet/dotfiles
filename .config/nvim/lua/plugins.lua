@@ -23,7 +23,12 @@ require('packer').startup({ function()
 
   use {
     'Pocco81/AutoSave.nvim',
-    config = [[require('plugged.autosave')]]
+    config = [[require('plugged.autosave')]],
+  }
+
+  use {
+    'windwp/nvim-autopairs',
+    config = [[require('plugged.autopairs')]],
   }
 
   use {
