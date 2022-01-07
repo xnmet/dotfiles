@@ -34,10 +34,9 @@ set.listchars  = { tab = '| ' }
 set.ignorecase = true
 set.smartcase  = true
 
--- set wildmode=list:longest,full
--- set completeopt=menu,longest
-
 -- set statusline=
 -- set statusline+=\ %F\ %m%r
 -- set statusline+=%=
 -- set statusline+=\ %l-%c/%L
+-- autocomplete
+set.completeopt = 'menu,menuone,noselect'
