@@ -110,6 +110,11 @@ require('packer').startup({ function()
     'folke/trouble.nvim',
   }
 
+  use {
+    'nvim-lualine/lualine.nvim',
+    config = [[require('plugged.lualine')]],
+  }
+
   -- colorschemes
   use {
     'widatama/vim-phoenix',
