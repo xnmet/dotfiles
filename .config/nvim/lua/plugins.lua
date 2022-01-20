@@ -32,6 +32,11 @@ require('packer').startup({ function()
   }
 
   use {
+    'phaazon/hop.nvim',
+    config = [[require('plugged.hop')]],
+  }
+
+  use {
     'nvim-telescope/telescope.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
     config = [[require('plugged.telescope')]],
@@ -63,10 +68,6 @@ require('packer').startup({ function()
     {
       'chaoren/vim-wordmotion',
       config = [[require('plugged.wordmotion')]]
-    },
-    {
-      'easymotion/vim-easymotion',
-      config = [[require('plugged.easymotion')]]
     },
     'kana/vim-textobj-user',
     'kana/vim-textobj-indent',
