@@ -10,7 +10,6 @@ set.jumpoptions = 'stack'
 -- visual
 set.number         = true
 set.termguicolors  = true
-set.signcolumn     = "yes"
 vim.cmd 'colorscheme sunbather'
 
 -- window

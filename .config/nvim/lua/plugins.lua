@@ -108,10 +108,11 @@ require('packer').startup({ function()
   -- lsp
   use {
     {
-      'neovim/nvim-lspconfig',
+      'williamboman/nvim-lsp-installer',
       requires = {
-        'williamboman/nvim-lsp-installer',
+        'neovim/nvim-lspconfig',
       },
+      config = [[require('plugged.lsp')]],
     },
     'folke/trouble.nvim',
   }
