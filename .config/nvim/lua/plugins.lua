@@ -114,7 +114,10 @@ require('packer').startup({ function()
       },
       config = [[require('plugged.lsp')]],
     },
-    'folke/trouble.nvim',
+    {
+      'folke/trouble.nvim',
+      config = [[require('plugged.trouble')]],
+    },
   }
 
   use {
