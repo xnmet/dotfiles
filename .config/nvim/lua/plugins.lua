@@ -100,8 +100,8 @@ require('packer').startup({ function()
       config = [[require('plugged.startify')]]
     },
     {
-      'psliwka/vim-smoothie',
-      config = [[require('plugged.smoothie')]]
+      'karb94/neoscroll.nvim',
+      config = [[require('plugged.neoscroll')]],
     },
   }
 

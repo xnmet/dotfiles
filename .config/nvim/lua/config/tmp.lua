@@ -33,8 +33,6 @@ nvim_map('n', '<c-u>', '<cmd>silent redo<cr>', { silent = true })
 
 -- navigation
 nvim_map('n', '1', 'gg', { noremap = true })
-nvim_map('',  '2', '<Plug>(SmoothieDownwards)')
-nvim_map('',  '3', '<Plug>(SmoothieUpwards)')
 nvim_map('n', '4', 'G',  { noremap = true })
 
 nvim_map('nx', '<a-i>', '^^')
