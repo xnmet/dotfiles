@@ -27,7 +27,7 @@ nvim_map('nx', '<a-o>', '$')
 ---- window
 nvim_map('n', '<tab>', '<c-w>w')
 nvim_map('n', '<s-tab>', '<c-w>W')
-nvim_map('n', '<leader><leader>', '<cmd>buffer #<cr>', { silent = true })
+nvim_map('n', '<cr>', '<cmd>buffer #<cr>', { silent = true })
 
 -- text movement
 nvim_map('n', '<c-j>', '<cmd>move +1<cr>',   { silent = true })
