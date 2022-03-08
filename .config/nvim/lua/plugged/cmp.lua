@@ -4,7 +4,6 @@ cmp.setup({
   mapping = {
     ['<tab>'] = cmp.mapping.select_next_item(),
     ['<s-tab>'] = cmp.mapping.select_prev_item(),
-    ['<cr>'] = cmp.mapping.confirm({ select = true }),
     ['<c-j>'] = cmp.mapping.scroll_docs(-4),
     ['<c-k>'] = cmp.mapping.scroll_docs(4),
   },
