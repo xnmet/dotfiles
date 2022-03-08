@@ -42,14 +42,15 @@ require('packer').startup({ function()
     config = [[require('plugged.telescope')]],
   }
 
-  -- use {
-  --   'nvim-treesitter/nvim-treesitter',
-  --   run = ':TSUpdate',
-  --   requires = {
-  --     'nvim-treesitter/playground',
-  --     'nvim-treesitter/nvim-treesitter-textobjects',
-  --   }
-  -- }
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    requires = {
+      'nvim-treesitter/playground',
+      'nvim-treesitter/nvim-treesitter-textobjects',
+    },
+    config = [[require('plugged.treesitter')]],
+  }
 
   -- text
   use {
