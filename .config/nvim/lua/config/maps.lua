@@ -11,11 +11,23 @@ nvim_map('', '<c-f>', '')
 nvim_map('', '<c-b>', '')
 nvim_map('', '0',     '')
 
--- jumplist
+-- navigation
+nvim_map('n', '<a-j>', "<cmd>lua require('neoscroll').scroll(vim.wo.scroll, true, 300)<cr>")
+nvim_map('n', '<a-k>', "<cmd>lua require('neoscroll').scroll(-vim.wo.scroll, true, 300)<cr>")
+nvim_map('n', '<a-h>', 'gg', { noremap = true })
+nvim_map('n', '<a-l>', 'G',  { noremap = true })
+---- jumplist
 nvim_map('n', '<a-w>', 'g;')
 nvim_map('n', '<a-e>', 'g,')
 nvim_map('n', '<a-s>', '<c-o>')
 nvim_map('n', '<a-d>', '<c-i>', { noremap = true })
+---- line
+nvim_map('nx', '<a-i>', '^^')
+nvim_map('nx', '<a-o>', '$')
+---- window
+nvim_map('n', '<tab>', '<c-w>w')
+nvim_map('n', '<s-tab>', '<c-w>W')
+nvim_map('n', '<leader><leader>', '<cmd>buffer #<cr>', { silent = true })
 
 -- text movement
 nvim_map('n', '<c-j>', '<cmd>move +1<cr>',   { silent = true })
@@ -31,19 +43,7 @@ nvim_map('x', '<c-l>', '>gv',                { silent = true })
 nvim_map('n', 'u',     '<cmd>silent undo<cr>', { silent = true })
 nvim_map('n', '<c-u>', '<cmd>silent redo<cr>', { silent = true })
 
--- navigation
-nvim_map('n', '1', 'gg', { noremap = true })
-nvim_map('n', '4', 'G',  { noremap = true })
-
-nvim_map('nx', '<a-i>', '^^')
-nvim_map('nx', '<a-o>', '$')
-
-nvim_map('n', '<tab>', '<c-w>w')
-nvim_map('n', '<s-tab>', '<c-w>W')
-
-nvim_map('n', '<enter>', '<cmd>buffer #<cr>', { silent = true })
-
--- 
+-- misc
 nvim_map('n', '<c-q>', '<cmd>q<cr>')
 nvim_map('n', '<c-r>', 'gr', { noremap = true, silent = true })
 nvim_map('n', 'Y', 'y$', { noremap = true })

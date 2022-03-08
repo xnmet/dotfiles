@@ -1,6 +1,6 @@
 require('config.utils')
 require('config.set')
-require('config.tmp')
+require('config.maps')
 require('config.cursor')
 require('config.buffer')
 require('config.term')
