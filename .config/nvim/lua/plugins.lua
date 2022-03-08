@@ -22,6 +22,13 @@ require('packer').startup({ function()
   use 'wbthomason/packer.nvim'
 
   use {
+    'andymass/vim-matchup',
+    requires = {
+      'nvim-treesitter/nvim-treesitter',
+    },
+  }
+
+  use {
     'Pocco81/AutoSave.nvim',
     config = [[require('plugged.autosave')]],
   }
