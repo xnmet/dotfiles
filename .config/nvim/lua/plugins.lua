@@ -97,8 +97,11 @@ require('packer').startup({ function()
   -- search
   use {
     'haya14busa/is.vim',
-    'haya14busa/vim-asterisk',
-    'osyo-manga/vim-anzu',
+    requires = {
+      'haya14busa/vim-asterisk',
+      'osyo-manga/vim-anzu',
+    },
+    config = [[require('plugged.incsearch')]],
   }
 
   -- interface

@@ -48,9 +48,3 @@ nvim_map('n', '<c-q>', '<cmd>q<cr>')
 nvim_map('n', '<c-r>', 'gr', { noremap = true, silent = true })
 nvim_map('n', 'Y', 'y$', { noremap = true })
 nvim_map('n', '<leader>r', ':so $MYVIMRC<cr>', { noremap = true })
-
--- incsearch
-nvim_map('', 'n',  '<Plug>(is-nohl)<Plug>(anzu-n-with-echo)')
-nvim_map('', 'N',  '<Plug>(is-nohl)<Plug>(anzu-N-with-echo)')
-nvim_map('', '*',  '<Plug>(asterisk-z*)<Plug>(is-nohl-1)')
-nvim_map('', 'g*', '<Plug>(asterisk-gz*)<Plug>(is-nohl-1)')
