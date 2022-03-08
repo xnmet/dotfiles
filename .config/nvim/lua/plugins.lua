@@ -21,21 +21,40 @@ vim.cmd [[
 require('packer').startup({ function()
   use 'wbthomason/packer.nvim'
 
+  -- sane
   use {
-    'andymass/vim-matchup',
-    requires = {
-      'nvim-treesitter/nvim-treesitter',
+    'nathom/filetype.nvim',
+    'tversteeg/registers.nvim',
+    {
+      'Pocco81/AutoSave.nvim',
+      config = [[require('plugged.autosave')]],
+    },
+    {
+      'windwp/nvim-autopairs',
+      config = [[require('plugged.autopairs')]],
+    },
+    {
+      'karb94/neoscroll.nvim',
+      config = [[require('plugged.neoscroll')]],
+    },
+    {
+      'haya14busa/is.vim',
+      requires = {
+        'haya14busa/vim-asterisk',
+        'osyo-manga/vim-anzu',
+      },
+      config = [[require('plugged.incsearch')]],
     },
   }
 
   use {
-    'Pocco81/AutoSave.nvim',
-    config = [[require('plugged.autosave')]],
+    'norcalli/nvim-colorizer.lua',
+    config = [[require('colorizer').setup {'css', 'javascript', 'vim', 'html'}]],
   }
 
   use {
-    'windwp/nvim-autopairs',
-    config = [[require('plugged.autopairs')]],
+    'andymass/vim-matchup',
+    requires = { 'nvim-treesitter/nvim-treesitter' },
   }
 
   use {
@@ -49,17 +68,7 @@ require('packer').startup({ function()
     config = [[require('plugged.telescope')]],
   }
 
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate',
-    requires = {
-      'nvim-treesitter/playground',
-      'nvim-treesitter/nvim-treesitter-textobjects',
-    },
-    config = [[require('plugged.treesitter')]],
-  }
-
-  -- text
+  -- text manipulation
   use {
     {
       'junegunn/vim-easy-align',
@@ -82,6 +91,18 @@ require('packer').startup({ function()
     'glts/vim-textobj-comment',
   }
 
+  -- interface
+  use {
+    {
+      'mhinz/vim-startify',
+      config = [[require('plugged.startify')]],
+    },
+    {
+      'nvim-lualine/lualine.nvim',
+      config = [[require('plugged.lualine')]],
+    }
+  }
+
   -- autocomplete
   use {
     'hrsh7th/nvim-cmp',
@@ -91,38 +112,14 @@ require('packer').startup({ function()
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-cmdline',
     },
-    config = [[require('plugged.cmp')]]
-  }
-
-  -- search
-  use {
-    'haya14busa/is.vim',
-    requires = {
-      'haya14busa/vim-asterisk',
-      'osyo-manga/vim-anzu',
-    },
-    config = [[require('plugged.incsearch')]],
-  }
-
-  -- interface
-  use {
-    {
-      'mhinz/vim-startify',
-      config = [[require('plugged.startify')]]
-    },
-    {
-      'karb94/neoscroll.nvim',
-      config = [[require('plugged.neoscroll')]],
-    },
+    config = [[require('plugged.cmp')]],
   }
 
   -- lsp
   use {
     {
       'williamboman/nvim-lsp-installer',
-      requires = {
-        'neovim/nvim-lspconfig',
-      },
+      requires = { 'neovim/nvim-lspconfig' },
       config = [[require('plugged.lsp')]],
     },
     {
@@ -131,9 +128,15 @@ require('packer').startup({ function()
     },
   }
 
+  -- treesitter
   use {
-    'nvim-lualine/lualine.nvim',
-    config = [[require('plugged.lualine')]],
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    requires = {
+      'nvim-treesitter/playground',
+      'nvim-treesitter/nvim-treesitter-textobjects',
+    },
+    config = [[require('plugged.treesitter')]],
   }
 
   -- colorschemes
