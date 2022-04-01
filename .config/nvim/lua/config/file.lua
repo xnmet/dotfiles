@@ -5,6 +5,5 @@ vim.cmd [[
 ]]
 
 vim.cmd [[
-  hi LengthHardLimit ctermfg=white ctermbg=red guifg=white guibg=red
-  match LengthHardLimit /\%>79v.*\%<81v/
+  match ColorColumn /\%<82v.\%>81v/
 ]]
