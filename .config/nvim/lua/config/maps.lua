@@ -12,10 +12,10 @@ nvim_map('', '<c-b>', '')
 nvim_map('', '0',     '')
 
 -- navigation
-nvim_map('n', '<a-j>', "<cmd>lua require('neoscroll').scroll(vim.wo.scroll, true, 300)<cr>")
-nvim_map('n', '<a-k>', "<cmd>lua require('neoscroll').scroll(-vim.wo.scroll, true, 300)<cr>")
-nvim_map('n', '<a-h>', 'gg', { noremap = true })
-nvim_map('n', '<a-l>', 'G',  { noremap = true })
+nvim_map('nx', '<a-j>', "<cmd>lua require('neoscroll').scroll(vim.wo.scroll, true, 300)<cr>")
+nvim_map('nx', '<a-k>', "<cmd>lua require('neoscroll').scroll(-vim.wo.scroll, true, 300)<cr>")
+nvim_map('nx', '<a-h>', 'gg', { noremap = true })
+nvim_map('nx', '<a-l>', 'G',  { noremap = true })
 ---- jumplist
 nvim_map('n', '<a-w>', 'g;')
 nvim_map('n', '<a-e>', 'g,')
