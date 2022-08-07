@@ -26,7 +26,7 @@ require('packer').startup({ function()
     'nathom/filetype.nvim',
     'tversteeg/registers.nvim',
     {
-      'Pocco81/AutoSave.nvim',
+      'pocco81/auto-save.nvim',
       config = [[require('plugged.autosave')]],
     },
     {

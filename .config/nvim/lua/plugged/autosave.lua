@@ -1,3 +1,5 @@
-require('autosave').setup({
-  execution_message = '',
+require('auto-save').setup({
+  execution_message = {
+    message = '',
+  }
 })
